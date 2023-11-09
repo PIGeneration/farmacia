@@ -54,7 +54,7 @@ namespace farmacia
                 );
             }
 
-            // Validação das Entidades
+            // Validaï¿½ï¿½o das Entidades
             builder.Services.AddTransient<IValidator<Produto>, ProdutoValidator>();
             builder.Services.AddTransient<IValidator<Categoria>, CategoriaValidator>();
 
@@ -71,11 +71,11 @@ namespace farmacia
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Projeto Farmácia",
-                    Description = "Projeto Farmácia - ASP.NET Core 7 - Entity Framework",
+                    Title = "Projeto Farmacia",
+                    Description = "Projeto Farmacia - ASP.NET Core 7 - Entity Framework",
                     Contact = new OpenApiContact
                     {
-                        Name = "Rafael Queiróz",
+                        Name = "Rafael Queiroz",
                         Email = "rafaelproinfo@gmail.com",
                         Url = new Uri("https://github.com/rafaelq80")
                     },
@@ -91,7 +91,7 @@ namespace farmacia
             // Adiciona o Fluent Validation no Swagger
             builder.Services.AddFluentValidationRulesToSwagger();
 
-            // Configuração do CORS
+            // Configuraï¿½ï¿½o do CORS
             builder.Services.AddCors(options => {
                 options.AddPolicy(name: "MyPolicy",
                     policy =>
@@ -117,12 +117,12 @@ namespace farmacia
 
             app.UseSwaggerUI();
 
-            // Swagger como Página Home na nuvem
+            // Swagger como Pï¿½gina Home na nuvem
             if (app.Environment.IsProduction())
             {
                 app.UseSwaggerUI(c =>
                 {
-                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Farmácia - V1");
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Farmï¿½cia - V1");
                     c.RoutePrefix = string.Empty;
 
                 });
